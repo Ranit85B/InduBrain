@@ -1,9 +1,15 @@
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
 import streamlit as st
 import fitz
 
 from backend.chunker import create_chunks
 from backend.vector_store import store_chunks, search_chunks
 from backend.llm import generate_answer
+
 st.set_page_config(
     page_title="InduBrain",
     page_icon="🏭"
