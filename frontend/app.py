@@ -1,11 +1,9 @@
 import streamlit as st
 import fitz
 
-from chunker import create_chunks
-from vector_store import store_chunks, search_chunks
-from llm import generate_answer
-
-
+from backend.chunker import create_chunks
+from backend.vector_store import store_chunks, search_chunks
+from backend.llm import generate_answer
 st.set_page_config(
     page_title="InduBrain",
     page_icon="🏭"

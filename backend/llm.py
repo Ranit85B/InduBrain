@@ -1,4 +1,4 @@
-from gemini_client import client
+from backend.gemini_client import client
 
 
 def generate_answer(question, context):
